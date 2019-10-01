@@ -2,7 +2,7 @@ import numpy as np
 
 
 class RetrievalModelsMatrix:
-
+# tf = total Frequency
     def __init__(self, tf, vectorizer):
         self.vectorizer = vectorizer
         self.tf = tf
@@ -18,13 +18,14 @@ class RetrievalModelsMatrix:
         self.docNorms = np.sqrt(np.sum(np.power(self.tfidf, 2), axis=1))
 
         ## LMD statistics
+        #António
 
 
         ## LMJM statistics
-
+        # Manel
         
         ## BM25 statistics
-
+        #Henrique
         
     def score_vsm(self, query):
         query_vector = self.vectorizer.transform([query]).toarray()
